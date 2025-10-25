@@ -22,16 +22,13 @@ Jobs:
       - name: Lint with Flake8
         run: pip install flake8 && flake8 src tests --max-line-length=100 || true
       - name: Test with Pytest
-        run: pip install pytest && pytest tests /v or true
+        run: pip install pytest && pytest tests || true
       - name: View launch checklist
         run: cat LAUNCH_CHECKLIST.md
       - name: Setup GitHub Secrets Ready
         run: |
           echo "GitHub Secrets Configuration:"
-          echo "0. ENvironment Variables", "1. Code Dependencies", "2. JWT Keys", "3. API Keys", "4.Database Credentials", "5. Sentry DSN",
-          echo "Add the above in Settings > Secrets and variables"
-/CJson/github/workspaces/path
-ECDO
-echo "To test API: "
-echo "curl -X GET http://localhost:8080/api/docs $API_KEY"
-"# Waiting for configuration ##
+          echo "0. Environment Variables, 1. Code Dependencies, 2. JWT Keys, 3. API Keys, 4.Database Credentials, 5. Sentry DSN"
+          echo "Add the above in Settings > Secrets and variables /CJson/github/workspaces/path"
+          echo "To test API:"
+          echo "curl -X GET http://localhost:8080/api/docs $API_KEY"
